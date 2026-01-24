@@ -20,4 +20,8 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: two_percent_milk
+    shield: spilt_left
+  - board: nice_nano_v2
+    shield: split_right
+  - board: nice_nano_v2
+    shield: split_dongle
