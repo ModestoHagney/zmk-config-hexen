@@ -7,6 +7,6 @@
 #include "tilps.dtsi"
 
 &kscan0 {
-	col-gpios = <>;
-	row-gpios = <>;
+	/delete-property/ col-gpios;
+	/delete-property/ row-gpios;
 };
