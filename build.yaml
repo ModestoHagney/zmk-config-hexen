@@ -20,10 +20,10 @@
 ---
 include:
   - board: nice_nano
-    shield: spilt_left
+    shield: tilps_left
   - board: nice_nano
-    shield: split_right
+    shield: tilps_right
   - board: nice_nano
-    shield: split_dongle
+    shield: tilps_dongle
   - board: nice_nano
     shield: settings_reset
