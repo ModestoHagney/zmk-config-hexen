@@ -7,6 +7,5 @@
 #include "tilps.dtsi"
 
 &kscan0 {
-	/delete-property/ col-gpios;
-	/delete-property/ row-gpios;
+	status = "disabled";
 };
