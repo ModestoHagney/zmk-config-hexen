@@ -4,12 +4,19 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include "tilps.dtsi"
+
 / {
     chosen {
+        /delete-property/ zmk,kscan;
         zmk,ble-central = &ble_central;
     };
 
     ble_central: ble_central {
         compatible = "zmk,ble-central";
     };
+};
+
+&kscan0 {
+    status = "disabled";
 };
