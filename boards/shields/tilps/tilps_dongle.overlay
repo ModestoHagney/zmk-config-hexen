@@ -10,6 +10,7 @@
     chosen {
         /delete-property/ zmk,kscan;
         zmk,ble-central = &ble_central;
+        zephyr,display = &oled;
     };
 
     ble_central: ble_central {
