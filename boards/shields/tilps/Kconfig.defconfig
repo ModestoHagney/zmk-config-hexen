@@ -15,11 +15,8 @@ config ZMK_USB
 if ZMK_DISPLAY
 
 config I2C
-    default y
-
-config DISPLAY_SH1106
-    default y
-
+    default Y
+	
 endif # ZMK_DISPLAY
 
 endif
