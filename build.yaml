@@ -25,3 +25,5 @@ include:
     shield: split_right
   - board: nice_nano_v2
     shield: split_dongle
+  - board: nice_nano_v2
+    shield: settings_reset
