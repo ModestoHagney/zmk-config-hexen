@@ -22,7 +22,7 @@
     status = "disabled";
 };
 
-/*
+
 &i2c0 {
     status = "okay";   
     oled: ssd1306@3c {
@@ -40,8 +40,8 @@
         prechargep = <0x22>;
     };
 };
-*/
 
+/*
 &i2c0 {
     status = "okay";
     oled: sh1106@3c {
@@ -60,3 +60,4 @@
         prechargep = <0x22>;
     };
 };
+*/
