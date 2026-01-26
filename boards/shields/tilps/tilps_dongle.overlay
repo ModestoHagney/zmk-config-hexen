@@ -22,16 +22,6 @@
     status = "disabled";
 };
 
-&i2c0 {
-    status = "okay";
-    oled: sh1106@3c {
-        compatible = "sinowealth,sh1106";
-        reg = <0x3c>;
-        width = <128>;
-        height = <64>;
-    };
-};
-
 /*
 &i2c0 {
     status = "okay";   
@@ -50,6 +40,7 @@
         prechargep = <0x22>;
     };
 };
+*/
 
 &i2c0 {
     status = "okay";
@@ -58,14 +49,14 @@
         reg = <0x3c>;
         width = <128>;
         height = <64>;
-        segment-offset = <0>;
+        segment-offset = <0>; // try 0, 1, or 2 if needed
         page-offset = <0>;
         display-offset = <0>;
         multiplex-ratio = <63>;
-        segment-remap;
-        com-invdir;
-        inversion-on;
+        // Only add the following if your display needs it:
+        // segment-remap;
+        // com-invdir;
+        // inversion-on;
         prechargep = <0x22>;
     };
 };
-*/
