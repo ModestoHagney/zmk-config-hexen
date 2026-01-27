@@ -23,14 +23,15 @@
 };
 
 
-&i2c0 {
+&pro_micro_i2c {
     status = "okay";   
+
     oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
         reg = <0x3c>;
         width = <128>;
         height = <64>;
-        segment-offset = <2>;
+        segment-offset = <0>;
         page-offset = <0>;
         display-offset = <0>;
         multiplex-ratio = <63>;
@@ -40,24 +41,3 @@
         prechargep = <0x22>;
     };
 };
-
-/*
-&i2c0 {
-    status = "okay";
-    oled: sh1106@3c {
-        compatible = "sinowealth,sh1106";
-        reg = <0x3c>;
-        width = <128>;
-        height = <64>;
-        segment-offset = <0>; // try 0, 1, or 2 if needed
-        page-offset = <0>;
-        display-offset = <0>;
-        multiplex-ratio = <63>;
-        // Only add the following if your display needs it:
-        // segment-remap;
-        // com-invdir;
-        // inversion-on;
-        prechargep = <0x22>;
-    };
-};
-*/
