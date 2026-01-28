@@ -1,13 +1,13 @@
 include:
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: hexen_dongle
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: hexen_left
     extra-conf: |
       CONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: hexen_right
     extra-conf: |
       CONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: settings_reset
