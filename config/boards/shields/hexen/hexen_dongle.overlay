@@ -19,16 +19,15 @@
     clock-frequency = <100000>;
 
     oled: ssd1306@3c {
-        compatible = "solomon,ssd1306fb";
+        compatible = "sinowealth,sh1106";
         reg = <0x3c>;
         width = <128>;
         height = <64>;
         segment-remap;
         com-invdir;
-        multiplex-ratio = <63>;
         prechargep = <0x22>;
         page-offset = <0>;
-        segment-offset = <0>;
+        segment-offset = <2>;
         display-offset = <0>;
     };
 };
