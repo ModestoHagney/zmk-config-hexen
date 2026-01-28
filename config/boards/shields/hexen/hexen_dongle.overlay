@@ -28,18 +28,3 @@
         prechargep = <0x22>;
     };
 };
-
-/*
-&i2c0 {
-    status = "okay";
-    ssd1306: ssd1306@3c {
-        compatible = "solomon,ssd1306fb";
-        reg = <0x3c>;
-        width = <128>;
-        height = <64>;  // or 32
-        segment-remap;
-        com-invdir;
-        /* page-remap;  <-- REMOVE THIS LINE */
-    };
-};
-*/
