@@ -3,7 +3,7 @@
 / {
     chosen {
         zmk,kscan = &mock_kscan;
-        zephyr,display = &oled;
+        // zephyr,display = &oled;
     };
 
     mock_kscan: kscan_0 {
@@ -13,6 +13,8 @@
         events = <0>;
     };
 };
+
+/*
 
 &pro_micro_i2c {
     status = "okay";
@@ -32,3 +34,5 @@
         display-offset = <0>;
     };
 };
+
+*/
