@@ -1,9 +1,17 @@
 #include "hexen.dtsi"
 
 / {
+    physical_layout0: physical_layout_0 {
+        compatible = "zmk,physical-layout";
+        display-name = "Default Layout";
+        transform = <&default_transform>;
+    };
+};
+
+/ {
     chosen {
         zmk,kscan = &mock_kscan;
-        // zephyr,display = &oled;
+        zmk,physical-layout = &physical_layout0;
     };
 
     mock_kscan: kscan_0 {
@@ -13,26 +21,3 @@
         events = <0>;
     };
 };
-
-/*
-
-&pro_micro_i2c {
-    status = "okay";
-    clock-frequency = <I2C_BITRATE_STANDARD>;
-
-    oled: ssd1306@3c {
-        compatible = "solomon,ssd1306fb";
-        reg = <0x3c>;
-        width = <128>;
-        height = <64>;
-        segment-remap;
-        com-invdir;
-        multiplex-ratio = <63>;
-        prechargep = <0x22>;
-        segment-offset = <0>;
-        page-offset = <0>;
-        display-offset = <0>;
-    };
-};
-
-*/
