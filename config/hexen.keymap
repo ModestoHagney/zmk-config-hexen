@@ -10,8 +10,6 @@
     macros {
         email: email {
             compatible = "zmk,behavior-macro";
-            wait-ms = <10>;
-            tap-ms = <10>;
             #binding-cells = <0>;
             bindings = <&kp Z &kp A &kp C &kp DOT &kp V &kp L &kp I &kp E &kp T &kp S &kp T &kp R &kp A &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
         };
