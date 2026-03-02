@@ -7,15 +7,14 @@
 &mt { quick_tap_ms = <220>; };
 
 / {
-    /*
     macros {
         email: email {
             compatible = "zmk,behavior-macro";
+            wait-ms = <10>;
             #binding-cells = <0>;
-            bindings = <&kp Z &kp O &kp U &kp R &kp E &kp M &kp A &kp I &kp L &kp AT &kp E &kp X &kp A &kp M &kp P &kp L &kp E &kp DOT &kp C &kp O &kp M>;
+            bindings = <&kp Z &kp A &kp C &kp DOT &kp V &kp L &kp I &kp E &kp T &kp S &kp T &kp R &kp A &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
         };
     };
-    */
 
     behaviors {
         lts: layer_tap_space {
@@ -47,7 +46,7 @@
                 &trans    &trans    &trans     &trans              &trans        &trans       &kp KP_N7  &kp KP_N8  &kp KP_N9  &trans    &kp F11   &kp F12
                 &kp CAPS  &trans    &trans     &trans              &trans        &trans       &kp KP_N4  &kp KP_N5  &kp KP_N6  &trans    &kp BSLH  &trans
                 &trans    &trans    &trans     &kp C_PLAY_PAUSE    &kp C_PREV    &kp C_NEXT   &kp KP_N1  &kp KP_N2  &kp KP_N3  &trans    &kp UP    &kp C_PLAY_PAUSE
-                &trans    &trans    &trans     &trans              &trans        &trans       &kp KP_N0  &trans     &trans     &kp LEFT  &kp DOWN  &kp RIGHT
+                &trans    &trans    &trans     &trans              &trans        &trans       &kp KP_N0  &trans     &email     &kp LEFT  &kp DOWN  &kp RIGHT
             >;
         };
 
@@ -57,7 +56,7 @@
                 &out OUT_TOG &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &none  &none  &none  &none  &none  &none
                 &none        &none        &none       &none        &none        &none           &none  &none  &none  &none  &none  &none
                 &none        &none        &none       &none        &none        &none           &none  &none  &none  &none  &none  &none
-                &none        &none        &none       &none        &none        &none           &none  &none  &none  &none  &none  &none
+                &none        &none        &none       &trans       &trans       &none           &none  &none  &none  &none  &none  &none
             >;
         };
     };
