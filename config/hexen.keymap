@@ -11,7 +11,7 @@
         email: email {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp Z &kp O &kp U &kp R &kp E &kp M &kp A &kp I &kp L &kp AT &kp E &kp X &kp A &kp M &kp P &kp L &kp E &kp DOT &kp C &kp O &kp M>;
+            bindings = <&kp Z &kp A &kp C &kp DOT &kp V &kp L &kp I &kp E &kp T &kp S &kp T &kp R &kp A &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
         };
     };
 
@@ -43,9 +43,9 @@
             bindings = <
                 &kp GRAVE &kp F1    &kp F2    &kp F3    &kp F4    &kp F5       &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &kp DEL
                 &trans    &trans    &trans    &trans    &trans    &trans       &kp KP_N7 &kp KP_N8 &kp KP_N9 &trans    &kp F11   &kp F12
-                &kp CAPS  &trans    &trans    &trans    &trans    &trans       &kp KP_N4 &kp KP_N5 &kp KP_N6 &trans    &kp BSLH  &kp UP
-                &trans    &trans    &trans    &trans    &trans    &trans       &kp KP_N1 &kp KP_N2 &kp KP_N3 &trans    &kp LEFT  &kp DOWN
-                &trans    &trans    &trans    &trans    &trans    &trans       &kp KP_N0 &trans    &email    &trans    &trans    &kp RIGHT
+                &kp CAPS  &trans    &trans    &trans    &trans    &trans       &kp KP_N4 &kp KP_N5 &kp KP_N6 &trans    &kp BSLH  &trans
+                &trans    &trans    &trans    &trans    &trans    &trans       &kp KP_N1 &kp KP_N2 &kp KP_N3 &trans    &kp UP    &trans
+                &trans    &trans    &trans    &trans    &trans    &trans       &kp KP_N0 &trans    &email    &kp LEFT    &kp DOWN  &kp RIGHT
             >;
         };
 
