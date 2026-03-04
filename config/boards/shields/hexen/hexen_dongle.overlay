@@ -1,17 +1,16 @@
 #include "hexen.dtsi"
 
 / {
+    chosen {
+        zmk,kscan = &mock_kscan;
+        zmk,physical-layout = &physical_layout0;
+        zephyr,display = &oled;
+    };
+
     physical_layout0: physical_layout_0 {
         compatible = "zmk,physical-layout";
         display-name = "Default Layout";
         transform = <&default_transform>;
-    };
-};
-
-/ {
-    chosen {
-        zmk,kscan = &mock_kscan;
-        zmk,physical-layout = &physical_layout0;
     };
 
     mock_kscan: kscan_0 {
@@ -33,10 +32,10 @@
         segment-offset = <0>;
         page-offset = <0>;
         display-offset = <0>;
-        multiplex-ratio = <63>; // Required for 64-pixel height
+        multiplex-ratio = <63>;
         segment-remap;
         com-invdir;
-        com-sequential;      // Use this for 128x64 (usually)
+        com-sequential;
         prechargep = <0x22>;
     };
 };
