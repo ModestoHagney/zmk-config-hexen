@@ -20,18 +20,17 @@
 &pro_micro_i2c {
     status = "okay";
 
-    oled: ssd1306@3d {
+    oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
-        reg = <0x3d>;
+        reg = <0x3c>;
         width = <128>;
         height = <64>;
-        segment-offset = <0>;
+        segment-offset = <0>;  // SSD1306 uses 0, not 2
         page-offset = <0>;
         display-offset = <0>;
         multiplex-ratio = <63>;
         segment-remap;
         com-invdir;
-        com-sequential;
         prechargep = <0x22>;
     };
 };
