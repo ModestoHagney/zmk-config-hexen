@@ -2,7 +2,7 @@ if SHIELD_HEXEN_DONGLE
 
 # Max 16 characters in keyboard name
 config ZMK_KEYBOARD_NAME
-    default "My Board"
+    default "Hexen"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
