@@ -20,7 +20,7 @@
 };
 
 &pro_micro_i2c {
-    compatible = "nordic,nrf-twi"; // I2C controller instead of generic
+    compatible = "nordic,nrf-twim";
     status = "okay";
     pinctrl-0 = <&i2c0_default>;
     pinctrl-1 = <&i2c0_sleep>;
