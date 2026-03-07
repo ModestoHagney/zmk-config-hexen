@@ -20,6 +20,9 @@
 };
 
 &i2c0 {
+    /delete-property/ pinctrl-0;
+    /delete-property/ pinctrl-1;
+    /delete-property/ pinctrl-names;
     compatible = "nordic,nrf-twim"; 
     status = "okay";
     pinctrl-0 = <&i2c0_default>;
