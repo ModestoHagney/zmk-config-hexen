@@ -42,8 +42,7 @@
         /* Swap these for standard 0.96 orientation */
         segment-remap;
         com-invdir;
-        /* Toggle this: try it with it first, then without if still garbled */
-        /* com-sequential; */ 
+        com-sequential;
         prechargep = <0x22>;
     };
 };
@@ -53,7 +52,7 @@
     ext-power {
         compatible = "zmk,ext-power-generic";
         control-gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
-        init-delay-ms = <50>;
+        init-delay-ms = <250>;
     };
 
     physical_layout0: physical_layout_0 {
@@ -75,3 +74,9 @@
         events = <0>;
     };
 };
+
+&i2c1 { status = "disabled"; };
+&spi0 { status = "disabled"; };
+&spi1 { status = "disabled"; };
+&spi2 { status = "disabled"; };
+&spi3 { status = "disabled"; };
