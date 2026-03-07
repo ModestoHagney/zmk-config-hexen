@@ -1,22 +1,5 @@
 #include "hexen.dtsi"
 
-&pinctrl {
-    i2c0_default: i2c0_default {
-        group1 {
-            psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
-                    <NRF_PSEL(TWIM_SCL, 0, 20)>;
-        };
-    };
-
-    i2c0_sleep: i2c0_sleep {
-        group1 {
-            psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
-                    <NRF_PSEL(TWIM_SCL, 0, 20)>;
-            low-power-enable;
-        };
-    };
-};
-
 &pro_micro_i2c {
     status = "okay";
 
@@ -25,7 +8,7 @@
         reg = <0x3c>;
         width = <128>;
         height = <64>;
-        segment-offset = <0>;  // SSD1306 uses 0, not 2
+        segment-offset = <0>;
         page-offset = <0>;
         display-offset = <0>;
         multiplex-ratio = <63>;
@@ -35,11 +18,12 @@
     };
 };
 
-&i2c0 {
-    status = "okay";
-    pinctrl-0 = <&i2c0_default>;
-    pinctrl-1 = <&i2c0_sleep>;
-    pinctrl-names = "default", "sleep";
+/ {
+    physical_layout0: physical_layout_0 {
+        compatible = "zmk,physical-layout";
+        display-name = "Default Layout";
+        transform = <&default_transform>;
+    };
 };
 
 / {
@@ -47,12 +31,6 @@
         zmk,kscan = &mock_kscan;
         zmk,physical-layout = &physical_layout0;
         zephyr,display = &oled;
-    };
-
-    physical_layout0: physical_layout_0 {
-        compatible = "zmk,physical-layout";
-        display-name = "Default Layout";
-        transform = <&default_transform>;
     };
 
     mock_kscan: kscan_0 {
