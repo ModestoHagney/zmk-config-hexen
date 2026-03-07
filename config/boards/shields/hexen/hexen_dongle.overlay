@@ -40,7 +40,7 @@
         segment-remap;
         com-invdir;
         /* Toggle this: try it with it first, then without if still garbled */
-        com-sequential; 
+        /* com-sequential; */ 
         prechargep = <0x22>;
     };
 };
