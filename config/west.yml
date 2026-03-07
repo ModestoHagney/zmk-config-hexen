@@ -11,6 +11,6 @@ manifest:
       import: app/west.yml
     - name: zmk-oled-adapter
       remote: mctechnology17
-      revision: v0.3
+      revision: main
   self:
     path: config
