@@ -32,14 +32,16 @@
         reg = <0x3c>;
         width = <128>;
         height = <64>;
-        segment-remap;
-        com-invdir;
-        com-sequential;
-        multiplex-ratio = <63>;
-        prechargep = <0x22>;
+        segment-offset = <0>;
         page-offset = <0>;
         display-offset = <0>;
-        segment-offset = <0>;
+        multiplex-ratio = <63>;
+        /* Swap these for standard 0.96 orientation */
+        segment-remap;
+        com-invdir;
+        /* Toggle this: try it with it first, then without if still garbled */
+        com-sequential; 
+        prechargep = <0x22>;
     };
 };
 
