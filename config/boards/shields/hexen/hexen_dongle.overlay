@@ -1,25 +1,21 @@
 #include "hexen.dtsi"
 
 &pro_micro_i2c {
-    compatible = "nordic,nrf-twim";
     status = "okay";
-    pinctrl-0 = <&i2c0_default>;
-    pinctrl-1 = <&i2c0_sleep>;
-    pinctrl-names = "default", "sleep";
-    
+
     oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
         reg = <0x3c>;
         width = <128>;
         height = <64>;
-        segment-offset = <0>;
+        segment-remap;
+        com-invdir;
+        com-sequential;
+        multiplex-ratio = <63>;
+        prechargep = <0x22>;
         page-offset = <0>;
         display-offset = <0>;
-        multiplex-ratio = <63>;
-        segment-remap;
-        com-sequential;
-        com-invdir;
-        prechargep = <0x22>;
+        segment-offset = <0>;
     };
 };
 
