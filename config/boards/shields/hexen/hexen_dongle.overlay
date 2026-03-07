@@ -3,7 +3,6 @@
 &pinctrl {
     i2c0_default: i2c0_default {
         group1 {
-            /* Use YOUR pins, not the doc's example pins */
             psels = <NRF_PSEL(TWIM_SDA, 0, 17)>, 
                     <NRF_PSEL(TWIM_SCL, 0, 20)>;
             bias-pull-up;
@@ -20,15 +19,12 @@
 };
 
 &i2c0 {
-    /delete-property/ pinctrl-0;
-    /delete-property/ pinctrl-1;
-    /delete-property/ pinctrl-names;
     compatible = "nordic,nrf-twim"; 
     status = "okay";
     pinctrl-0 = <&i2c0_default>;
     pinctrl-1 = <&i2c0_sleep>;
     pinctrl-names = "default", "sleep";
-    clock-frequency = <10000>;
+    clock-frequency = <100000>;
 
     oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
@@ -39,9 +35,6 @@
         page-offset = <0>;
         display-offset = <0>;
         multiplex-ratio = <63>;
-        /* Swap these for standard 0.96 orientation */
-        segment-remap;
-        com-invdir;
         com-sequential;
         prechargep = <0x22>;
     };
@@ -52,7 +45,7 @@
     ext-power {
         compatible = "zmk,ext-power-generic";
         control-gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
-        init-delay-ms = <250>;
+        init-delay-ms = <50>;
     };
 
     physical_layout0: physical_layout_0 {
@@ -74,9 +67,3 @@
         events = <0>;
     };
 };
-
-&i2c1 { status = "disabled"; };
-&spi0 { status = "disabled"; };
-&spi1 { status = "disabled"; };
-&spi2 { status = "disabled"; };
-&spi3 { status = "disabled"; };
