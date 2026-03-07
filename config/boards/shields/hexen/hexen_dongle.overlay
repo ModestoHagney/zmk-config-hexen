@@ -8,7 +8,6 @@
             bias-pull-up;
         };
     };
-
     i2c0_sleep: i2c0_sleep {
         group1 {
             psels = <NRF_PSEL(TWIM_SDA, 0, 6)>,
@@ -19,13 +18,13 @@
 };
 
 &i2c0 {
-    compatible = "nordic,nrf-twi"; 
+    compatible = "nordic,nrf-twi";  // Changed from nrf-twim
     status = "okay";
     pinctrl-0 = <&i2c0_default>;
     pinctrl-1 = <&i2c0_sleep>;
     pinctrl-names = "default", "sleep";
-    clock-frequency = <100000>;
-
+    clock-frequency = <I2C_BITRATE_FAST>;  // Changed from 100000
+    
     oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
         reg = <0x3c>;
@@ -35,31 +34,33 @@
         page-offset = <0>;
         display-offset = <0>;
         multiplex-ratio = <63>;
+        segment-remap;
+        com-invdir;
         com-sequential;
+        inversion-on;
         prechargep = <0x22>;
     };
 };
 
 / {
-
     ext-power {
         compatible = "zmk,ext-power-generic";
         control-gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
-        init-delay-ms = <3000>;
+        init-delay-ms = <50>;
     };
-
+    
     physical_layout0: physical_layout_0 {
         compatible = "zmk,physical-layout";
         display-name = "Default Layout";
         transform = <&default_transform>;
     };
-
+    
     chosen {
         zmk,kscan = &mock_kscan;
         zmk,physical-layout = &physical_layout0;
         zephyr,display = &oled;
     };
-
+    
     mock_kscan: kscan_0 {
         compatible = "zmk,kscan-mock";
         columns = <0>;
