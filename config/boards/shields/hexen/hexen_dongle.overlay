@@ -53,7 +53,7 @@
     pinctrl-names = "default", "sleep";
 
     oled: ssd1306@3c {
-        compatible = "sinowealth,sh1106";   # solomon,ssd1306fb
+        compatible = "sinowealth,sh1106";   /* solomon,ssd1306fb */
         reg = <0x3c>;
         width = <128>;
         height = <64>;
