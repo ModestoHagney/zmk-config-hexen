@@ -57,7 +57,7 @@
         reg = <0x3c>;
         width = <128>;
         height = <64>;
-        segment-offset = <2>;
+        segment-offset = <2>; /* 0 */
         page-offset = <0>;
         display-offset = <0>;
         multiplex-ratio = <63>;
