@@ -21,6 +21,12 @@
         rows = <0>;
         events = <0>;
     };
+
+	ext-power {
+		compatible = "zmk,ext-power-generic";
+		init-delay-ms = <50>;
+		control-gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
+	};
 };
 
 &pro_micro_i2c {
