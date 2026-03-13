@@ -47,18 +47,18 @@
                 &kp GRAVE  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6     &kp F7     &kp F8     &kp F9    &kp F10   &kp DEL
                 &trans     &trans  &trans  &trans  &trans  &trans  &kp KP_N7  &kp KP_N8  &kp KP_N9  &trans    &kp F11   &kp F12
                 &kp CAPS   &trans  &trans  &trans  &trans  &trans  &kp KP_N4  &kp KP_N5  &kp KP_N6  &trans    &kp BSLH  &trans
-                &trans     &trans  &trans  &trans  &trans  &trans  &kp KP_N1  &kp KP_N2  &kp KP_N3  &trans    &kp FLSH  &trans
+                &trans     &trans  &trans  &trans  &trans  &trans  &kp KP_N1  &kp KP_N2  &kp KP_N3  &trans    &kp FSLH  &tog 2
                 &trans     &trans  &trans  &trans  &trans  &trans  &kp KP_N0  &trans     &email     &kp EQUAL &kp LBKT &kp RBKT
             >;
         };
 
-        gameing{
+        gaming{
             display-name = "Gaming";
             bindings = <
                 &kp ESC    &kp N1  &kp N2  &kp N3    &kp N4     &kp N5     &trans  &trans  &trans  &trans  &trans  &trans
                 &kp TAB    &kp Q   &kp W   &kp E     &kp R      &kp T      &trans  &trans  &trans  &trans  &trans  &trans
                 &trans     &kp A   &kp S   &kp D     &kp F      &kp G      &trans  &trans  &trans  &trans  &trans  &trans
-                &kp LSHFT  &kp Z   &kp X   &kp C     &kp V      &kp B      &trans  &trans  &trans  &trans  &trans  &trans
+                &kp LSHFT  &kp Z   &kp X   &kp C     &kp V      &kp B      &trans  &trans  &trans  &trans  &trans  &tog 2
                 &kp LCTRL  &kp M   &kp N   &kp LALT  &kp SPACE  &kp SPACE  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
