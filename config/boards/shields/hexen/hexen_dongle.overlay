@@ -22,7 +22,7 @@
         events = <0>;
     };
 
-	ext-power {
+	EXT_POWER {
 		compatible = "zmk,ext-power-generic";
 		init-delay-ms = <50>;
 		control-gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
@@ -63,7 +63,7 @@
         multiplex-ratio = <63>;
         segment-remap;
         com-invdir;
-        com-sequential;
+        /* com-sequential; */
         inversion-on;
         prechargep = <0x22>;
     };
