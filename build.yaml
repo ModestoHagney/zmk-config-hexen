@@ -2,11 +2,12 @@ include:
   - board: nice_nano
     shield: hexen_dongle dongle_display
     # snippet: zmk-usb-logging
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
 
   - board: nice_nano
     shield: hexen_left
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-    
+
   - board: nice_nano
     shield: hexen_right
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
