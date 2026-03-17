@@ -4,9 +4,9 @@
 	chosen {
 		zmk,kscan = &kscan0;
 		zmk,matrix_transform = &default_transform;
-		zmk,battery = &vbatt;
+		/* zmk,battery = &vbatt; */
 	};
-
+/* 
 	vbatt: vbatt {
         compatible = "zmk,battery-voltage-divider";
         label = "BATTERY";
@@ -14,7 +14,7 @@
         output-ohms = <2000000>;
         full-ohms = <2806000>;
     };
-
+*/
 	default_transform: keymap_transform_0 {
 		compatible = "zmk,matrix-transform";
 		columns = <12>;
