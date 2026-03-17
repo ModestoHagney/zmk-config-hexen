@@ -1,7 +1,7 @@
 #include "hexen.dtsi"
 
 &default_transform {
-    col-offset = <6>; // This shifts the Right half columns to the 2nd half of the keymap
+    col-offset = <6>;
 };
 
 / {

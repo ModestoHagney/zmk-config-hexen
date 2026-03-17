@@ -7,7 +7,7 @@
 
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
-        diode-direction = "col2row"; // Assumes diode flows from Col to Row
+        diode-direction = "col2row";
 
         row-gpios
             = <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Row 0

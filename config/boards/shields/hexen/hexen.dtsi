@@ -4,17 +4,8 @@
 	chosen {
 		zmk,kscan = &kscan0;
 		zmk,matrix_transform = &default_transform;
-		/* zmk,battery = &vbatt; */
 	};
-/* 
-	vbatt: vbatt {
-        compatible = "zmk,battery-voltage-divider";
-        label = "BATTERY";
-        io-channels = <&adc 2>;
-        output-ohms = <2000000>;
-        full-ohms = <2806000>;
-    };
-*/
+
 	default_transform: keymap_transform_0 {
 		compatible = "zmk,matrix-transform";
 		columns = <12>;
@@ -27,4 +18,8 @@
 			RC(4,0) RC(4,1) RC(4,2) RC(4,3) RC(4,4) RC(4,5) RC(4,6) RC(4,7) RC(4,8) RC(4,9) RC(4,10) RC(4,11)
 		>;
 	};
+};
+
+&kscan0 {
+    wakeup-source;
 };
