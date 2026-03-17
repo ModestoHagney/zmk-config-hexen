@@ -19,7 +19,3 @@
 		>;
 	};
 };
-
-&kscan0 {
-    wakeup-source;
-};
