@@ -79,5 +79,13 @@
                 &none          &none         &none         &trans        &trans        &none         &none  &none  &none  &none  &none  &none
             >;
         };
+
+        spare_0 {
+            status = "reserved";
+        };
+
+        spare_0 {
+            status = "reserved";
+        };
     };
 };
