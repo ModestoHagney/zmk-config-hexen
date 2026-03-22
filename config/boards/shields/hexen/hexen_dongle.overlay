@@ -21,6 +21,10 @@
 	};
 };
 
+&physical_layout {
+    kscan = <&mock_kscan>;
+};
+
 &pinctrl {
     i2c0_default: i2c0_default {
         group1 {
