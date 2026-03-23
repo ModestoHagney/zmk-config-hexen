@@ -50,11 +50,11 @@
         function {
             display-name = "Func";
             bindings = <
-                &kp GRAVE  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6     &kp F7     &kp F8     &kp F9    &kp F10   &kp DEL
-                &trans     &trans  &trans  &trans  &trans  &trans  &kp KP_N7  &kp KP_N8  &kp KP_N9  &trans    &kp F11   &kp F12
-                &kp CAPS   &trans  &trans  &trans  &trans  &trans  &kp KP_N4  &kp KP_N5  &kp KP_N6  &trans    &kp BSLH  &trans
-                &trans     &trans  &trans  &trans  &trans  &trans  &kp KP_N1  &kp KP_N2  &kp KP_N3  &email    &kp FSLH  &tog 2
-                &trans     &trans  &mo 3   &trans  &trans  &trans  &kp KP_N0  &trans     &trans     &kp EQUAL &kp LBKT &kp RBKT
+                &kp GRAVE  &kp F1  &kp F2  &kp F3      &kp F4      &kp F5      &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp DEL
+                &trans     &trans  &trans  &trans      &trans      &trans      &kp KP_N7  &kp KP_N8  &kp KP_N9  &trans     &kp F11    &kp F12
+                &kp CAPS   &trans  &trans  &trans      &trans      &trans      &kp KP_N4  &kp KP_N5  &kp KP_N6  &trans     &kp BSLH   &trans
+                &trans     &trans  &trans  &kp C_PREV  &kp C_PLAY  &kp C_NEXT  &kp KP_N1  &kp KP_N2  &kp KP_N3  &email     &kp FSLH   &tog 2
+                &trans     &trans  &mo 3   &trans      &trans      &trans      &kp KP_N0  &trans     &trans     &kp EQUAL  &kp LBKT   &kp RBKT
             >;
         };
 
