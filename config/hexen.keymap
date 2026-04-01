@@ -84,7 +84,7 @@
             status = "reserved";
         };
 
-        spare_0 {
+        spare_1 {
             status = "reserved";
         };
     };
