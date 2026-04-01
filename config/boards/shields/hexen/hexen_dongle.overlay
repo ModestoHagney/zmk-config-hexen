@@ -4,7 +4,9 @@
     chosen {
         zmk,kscan = &mock_kscan;
         zmk,physical-layout = &physical_layout;
+        /*
         zephyr,display = &oled;
+        */
     };
 
     mock_kscan: kscan_0 {
@@ -13,11 +15,12 @@
         rows = <0>;
         events = <0>;
     };
-
+    /*
 	EXT_POWER {
 		compatible = "zmk,ext-power-generic";
 		init-delay-ms = <50>;
 		control-gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
+    */
 	};
 };
 
@@ -25,6 +28,7 @@
     kscan = <&mock_kscan>;
 };
 
+/*
 &pinctrl {
     i2c0_default: i2c0_default {
         group1 {
@@ -64,3 +68,4 @@
         prechargep = <0x22>;
     };
 };
+*/
