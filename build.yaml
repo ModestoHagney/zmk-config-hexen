@@ -5,7 +5,6 @@ include:
   #   snippet: studio-rpc-usb-uart
   #   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
 
-  include:
   - board: seeeduino_xiao_ble
     shield: hexen_dongle prospector_adapter
 
