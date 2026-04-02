@@ -4,8 +4,10 @@ manifest:
       url-base: https://github.com/zmkfirmware
     #- name: englmaxi
     #  url-base: https://github.com/englmaxi
-    - name: carrefinho                            
-      url-base: https://github.com/carrefinho
+    # - name: carrefinho                            
+    #   url-base: https://github.com/carrefinho
+    - name: janpfischer
+      url-base: https://github.com/janpfischer
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -14,8 +16,11 @@ manifest:
     #- name: zmk-dongle-display
     #  remote: englmaxi
     #  revision: v0.3
-    - name: prospector-zmk-module
-      remote: carrefinho
+    # - name: prospector-zmk-module
+    #   remote: carrefinho
+    #   revision: main
+    - name: zmk-dongle-screen
+      remote: janpfischer
       revision: main
   self:
     path: config

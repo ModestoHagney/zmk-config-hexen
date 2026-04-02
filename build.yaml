@@ -6,8 +6,10 @@ include:
   #   cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
 
   - board: seeeduino_xiao_ble
-    shield: hexen_dongle prospector_adapter
-
+    shield: hexen_dongle dongle_screen
+    #prospector_adapter
+    artifact-name: dongle-screen
+    
   - board: nice_nano_v2
     shield: hexen_left
     cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
