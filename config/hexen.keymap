@@ -37,7 +37,7 @@
         compatible = "zmk,keymap";
 
         base {
-            display-name = "Base";
+            display-name = "BASE";
             bindings = <
                 &kp ESC     &kp N1    &kp N2    &kp N3  &kp N4          &kp N5       &kp N6     &kp N7     &kp N8        &kp N9     &kp N0    &kp BSPC
                 &kp TAB     &kp Q     &kp W     &kp E   &kp R           &kp T        &kp Y      &kp U      &kp I         &kp O      &kp P     &kp MINUS
@@ -48,10 +48,10 @@
         };
 
         function {
-            display-name = "Func";
+            display-name = "FUNC";
             bindings = <
                 &kp GRAVE  &kp F1  &kp F2  &kp F3      &kp F4      &kp F5      &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp DEL
-                &trans     &trans  &trans  &trans      &trans      &trans      &kp KP_N7  &kp KP_N8  &kp KP_N9  &trans     &kp F11    &kp F12
+                &trans     &trans  &trans  &trans      &trans      &trans      &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp F11    &kp F12    &kp INS
                 &kp CAPS   &trans  &trans  &trans      &trans      &trans      &kp KP_N4  &kp KP_N5  &kp KP_N6  &trans     &kp BSLH   &trans
                 &trans     &trans  &trans  &kp C_PREV  &kp C_PLAY  &kp C_NEXT  &kp KP_N1  &kp KP_N2  &kp KP_N3  &email     &kp FSLH   &tog 2
                 &trans     &trans  &mo 3   &trans      &trans      &trans      &kp KP_N0  &trans     &trans     &kp EQUAL  &kp LBKT   &kp RBKT
@@ -59,7 +59,7 @@
         };
 
         game{
-            display-name = "Game";
+            display-name = "GAME";
             bindings = <
                 &kp ESC    &kp N1  &kp N2  &kp N3    &kp N4     &kp N5     &trans  &trans  &trans  &trans  &trans  &trans
                 &kp TAB    &kp Q   &kp W   &kp E     &kp R      &kp T      &trans  &trans  &trans  &trans  &trans  &trans
@@ -70,7 +70,7 @@
         };
 
         settings {
-            display-name = "Sett";
+            display-name = "SETT";
             bindings = <
                 &bootloader    &none         &none         &none         &none         &none         &none  &none  &none  &none  &none  &bootloader
                 &out OUT_TOG   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none  &none  &none  &none  &none  &studio_unlock
